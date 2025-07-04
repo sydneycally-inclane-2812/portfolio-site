@@ -1,0 +1,138 @@
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.calculator h1 {
+  color: #646cff;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.calculator-body {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+}
+
+.display {
+  background: #000;
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: 'Courier New', monospace;
+  text-align: right;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #333;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 320px;
+}
+
+.btn {
+  height: 70px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #333;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-clear {
+  background: #ff6b6b;
+  color: white;
+}
+
+.btn-clear:hover {
+  background: #ff5252;
+}
+
+.btn-operation {
+  background: #4ecdc4;
+  color: white;
+}
+
+.btn-operation:hover {
+  background: #26a69a;
+}
+
+.btn-equals {
+  background: #646cff;
+  color: white;
+  grid-row: span 2;
+  height: 152px;
+}
+
+.btn-equals:hover {
+  background: #5a5fcf;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+.btn:not(.btn-clear):not(.btn-operation):not(.btn-equals) {
+  background: #444;
+}
+
+.btn:not(.btn-clear):not(.btn-operation):not(.btn-equals):hover {
+  background: #555;
+}
+
+@media (max-width: 480px) {
+  .calculator-body {
+    padding: 1rem;
+  }
+  
+  .buttons {
+    width: 280px;
+  }
+  
+  .btn {
+    height: 60px;
+    font-size: 1.3rem;
+  }
+  
+  .btn-equals {
+    height: 132px;
+  }
+  
+  .display {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
